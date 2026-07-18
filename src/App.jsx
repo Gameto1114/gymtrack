@@ -1,5 +1,8 @@
+import Home from "./pages/Home";
+import "./App.css";
+
 function App() {
-  return <h1>GymTrack</h1>;
+  return <Home />;
 }
 
 export default App;
