@@ -1,0 +1,59 @@
+.routine-card {
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 24px;
+  transition: 0.3s;
+}
+
+.routine-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-4px);
+}
+
+.routine-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.routine-card-header h3 {
+  font-size: 20px;
+}
+
+.fav-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 26px;
+  cursor: pointer;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.fav-btn.active {
+  color: #d4af37;
+}
+
+.routine-category {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(214, 40, 40, 0.15);
+  color: #d62828;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.routine-description {
+  color: #ccc;
+  margin: 16px 0;
+  line-height: 24px;
+}
+
+.routine-duration {
+  color: #999;
+  font-size: 14px;
+}

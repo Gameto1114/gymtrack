@@ -28,6 +28,17 @@
     transition:.3s;
 }
 
-.navbar li:hover{
+.navbar li a{
+    color:inherit;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.navbar li a:hover{
     color:#d4af37;
+}
+
+.navbar li a.active-link{
+    color:#d4af37;
+    font-weight:bold;
 }

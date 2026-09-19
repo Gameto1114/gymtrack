@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import gym from "../assets/gym.png";
 import "./Hero.css";
 
@@ -20,7 +21,9 @@ function HeroSection() {
           resistencia y bienestar.
         </p>
 
-        <button>COMENZAR AHORA</button>
+        <Link to="/rutinas">
+          <button>COMENZAR AHORA</button>
+        </Link>
 
       </div>
 
