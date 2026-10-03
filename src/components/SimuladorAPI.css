@@ -1,0 +1,12 @@
+.simulador-api {
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 24px;
+  color: #ccc;
+}
+
+.simulador-api h3 {
+  color: white;
+  margin-bottom: 12px;
+}

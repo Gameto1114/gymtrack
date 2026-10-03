@@ -1,6 +1,20 @@
-.rutinas-page {
-  padding: 60px 90px;
+.rutinas-layout {
+  display: flex;
   min-height: 70vh;
+}
+
+.rutinas-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.rutinas-page {
+  padding: 40px 60px;
+}
+
+.simulador-api {
+  margin-bottom: 30px;
+  max-width: 480px;
 }
 
 .rutinas-page h1 {
@@ -42,7 +56,11 @@
 }
 
 @media (max-width: 768px) {
+  .rutinas-layout {
+    flex-direction: column;
+  }
+
   .rutinas-page {
-    padding: 40px 24px;
+    padding: 24px;
   }
 }

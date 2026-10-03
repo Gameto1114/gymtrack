@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Sidebar from "../components/Sidebar";
+import TopNav from "../components/TopNav";
+import SimuladorAPI from "../components/SimuladorAPI";
 import RoutineCard from "../components/RoutineCard";
 import routines from "../data/routines";
 import "./Rutinas.css";
@@ -15,34 +18,42 @@ function Rutinas() {
   });
 
   return (
-    <>
-      <section className="rutinas-page">
-        <h1>Rutinas</h1>
-        <p className="rutinas-subtitle">
-          Encuentra la rutina perfecta para tu objetivo.
-        </p>
+    <div className="rutinas-layout">
+      <Sidebar />
 
-        <input
-          type="text"
-          className="search-input"
-          placeholder="Buscar rutina por nombre o categoría..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+      <div className="rutinas-content">
+        <TopNav />
 
-        <div className="routines-grid">
-          {filteredRoutines.length > 0 ? (
-            filteredRoutines.map((routine) => (
-              <RoutineCard key={routine.id} routine={routine} />
-            ))
-          ) : (
-            <p className="no-results">
-              No se encontraron rutinas para "{query}".
-            </p>
-          )}
-        </div>
-      </section>
-    </>
+        <section className="rutinas-page">
+          <h1>Rutinas</h1>
+          <p className="rutinas-subtitle">
+            Encuentra la rutina perfecta para tu objetivo.
+          </p>
+
+          <SimuladorAPI />
+
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Buscar rutina por nombre o categoría..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+
+          <div className="routines-grid">
+            {filteredRoutines.length > 0 ? (
+              filteredRoutines.map((routine) => (
+                <RoutineCard key={routine.id} routine={routine} />
+              ))
+            ) : (
+              <p className="no-results">
+                No se encontraron rutinas para "{query}".
+              </p>
+            )}
+          </div>
+        </section>
+      </div>
+    </div>
   );
 }
 

@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FavoritesProvider } from "./context/FavoritesContext";
+import { AuthProvider } from "./context/AuthContext";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Rutinas from "./pages/Rutinas";
@@ -9,18 +10,20 @@ import "./App.css";
 
 function App() {
   return (
-    <FavoritesProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="rutinas" element={<Rutinas />} />
-            <Route path="planes" element={<Planes />} />
-            <Route path="contacto" element={<Contacto />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </FavoritesProvider>
+    <AuthProvider>
+      <FavoritesProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="rutinas" element={<Rutinas />} />
+              <Route path="planes" element={<Planes />} />
+              <Route path="contacto" element={<Contacto />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </FavoritesProvider>
+    </AuthProvider>
   );
 }
 

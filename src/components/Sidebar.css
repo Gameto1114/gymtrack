@@ -1,0 +1,52 @@
+.sidebar {
+  width: 220px;
+  background: #161616;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #111;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-name {
+  font-weight: bold;
+}
+
+.sidebar-role {
+  color: #999;
+  font-size: 12px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-nav a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar-nav a:hover {
+  color: #d4af37;
+}
